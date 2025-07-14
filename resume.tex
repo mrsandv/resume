@@ -1,0 +1,141 @@
+\documentclass[letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tgpagella}
+\usepackage{geometry}
+\geometry{
+  letterpaper,
+  left=20mm,
+  %right=
+  %bottom=
+  top=15mm}
+\pagestyle{empty}
+\usepackage{fontawesome5}
+
+\newlength{\iconwidth}
+\setlength{\iconwidth}{1.2em}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{lavender}{HTML}{8E7CC3}
+\definecolor{darklavender}{HTML}{674EA7}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=darklavender]{hyperref}
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\color{darklavender}\Large}
+  {}{0em}{}[{\color{darklavender}\titlerule[1pt]}]
+
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+
+\newcommand{\work}[4]{
+\noindent  \textbf{#1}
+\hfill
+\mbox{
+    \parbox{10em}{%
+    \centering\textbf{#2}}} \par
+\noindent \textit{#3} \par
+\vspace*{0.5em}
+\noindent\hangindent=2em\hangafter=0 \small #4
+\normalsize \par}
+
+
+\newcommand{\skill}[2]{
+\noindent\hangindent=2em\hangafter=0
+\parbox{3\spacebox}{
+\textbf{#1}}
+#2 \par
+\vspace{0.5em}
+}
+
+
+\newcommand{\lan}[2]{
+\noindent\hangindent=2em\hangafter=0
+\parbox{\spacebox}{%
+    \textbf{#1}}
+    #2 \par}
+
+\newcommand{\education}[4]{
+\noindent  \textbf{#1}
+    \hfill
+    \mbox{
+        \parbox{10em}{%
+        \centering\textbf{#2}}} \par
+    \noindent \textit{#3} \par
+    \vspace*{0.5em}
+    \noindent\hangindent=2em\hangafter=0 \small #4
+\normalsize \par}
+
+\begin{document}
+\thispagestyle{empty}
+\noindent
+\textbf{\Huge \textcolor{darklavender}{Marco Antonio} \textcolor{lavender}{Sandoval Espinosa}}\par
+
+\begin{flushleft}
+
+\end{flushleft}\par
+
+\noindent
+\begin{itemize}[itemsep=0em]
+\item[\faAt] \href{mailto:mrsandv@pm.me}{mrsandv@pm.me}
+\item[\faLinkedin]\href{https://linkedin.com/in/mrsan}{linkedin.com/in/mrsan}
+\item[\faPhone] \href{tel:+525580367317}{+52 55 803 673 17}
+\item[\faMapMarker] Mexico City.
+\end{itemize}
+
+\section*{Experience}
+\work{Web team lead}{Jan 2020 -- Jul 2025}{Flink/Webull MX}{
+\begin{itemize}[leftmargin=*, itemsep=0em, label=- ]
+    \item I standardized the use of NextJS and TypeScript as the core stack across all web projects, leading the migration of legacy systems and the implementation of the stack in new developments.
+    \item I designed high-performance web solutions, focusing on optimizing processes and improving the user experience.
+    \item I implemented CI/CD pipelines using GitLab CI, AWS ECS/ECR, Lambdas, and containers, which streamlined development and maintenance processes in production.
+    \item I designed and implemented APIs for web projects, modeling schemas and optimizing queries to transactional databases.
+    \item I established code standards and best practices, creating documentation and configurations to ensure code quality and consistency.
+    \item I managed projects using agile methodologies, ensuring on time delivery and achievement of objectives.
+    \item I gathered and analyzed internal client requirements, designing workflows, mockups, and functionalities to achieve the company needs.
+\end{itemize}
+}
+\vspace*{1em}
+\work{Frontend developer}{Nov 2018 -- Jan 2020}{Forward company}{
+\begin{itemize}[leftmargin=*, itemsep=0em, label=-]
+    \item I improve the UI of the company's LMS platform by migrating 100\% of the inline styles to an SCSS style preprocessor, improving maintainability and scalability.
+    \item Implemented dynamic loading of HTML content, utilizing configuration and localization files for a more personalized user experience.
+    \item I collaborated with stakeholders to gather and refine LMS platform requirements, designing UX flows, mockups, and functionalities to address user needs.
+    \item I led the development and maintenance of the main frontend components, ensuring the stability and performance of the platform.
+\end{itemize}}
+\vspace*{1em}
+\work{Technology Consultant}{Nov 2018 -- Ene 2020}{Spanish Training Academy}{
+\begin{itemize}[leftmargin=*, itemsep=0em, label=-]
+    \item I developed an informative website in WordPress hosted on a Linux Ubuntu server, displaying courses, prices, contact forms, and essential pages to promote the academy's offerings.
+    \item I implemented and configured a Moodle LMS platform on a DigitalOcean server, implementing SSL certificates, managing databases, and overseeing user administration for seamless and secure course delivery.
+    \item I provided IT support and managed GSuite tools to ensure smooth operations and improve productivity within the organization.
+\end{itemize}}
+
+\section*{Education}
+\education{Physics BS.}{2009 -- 2015}{UNAM}{}
+\education{Software and Network Design Engineer}{2023 -- present}{UVM}{}
+
+\section*{Tech Skills}
+\skill{Programming languages}{\textsc{JavaScript},  \textsc{TypeScript},  \textsc{Golang} }
+\skill{Frameworks}{\textsc{ReactJS, NextJS, Gatsby, Express, Echo}}
+\skill{Frontend}{\textsc{HTML, CSS, SCSS, Tailwind, MUI}}
+\skill{Databases}{\textsc{MongoDB, Redis, PostgreSQL, MariaDB}}
+\skill{Cloud}{\textsc{AWS, Digital Ocean, GCP, Vercel, Azure}}
+\skill{Tools}{\textsc{Markdown, Git, Docker, Podman, \LaTeX}}
+\skill{ }{\textsc{Bash, Jasper Reports, IA agents}}
+
+\section*{Languages}
+\lan{Spanish}{Native}
+\lan{English}{B2}
+
+\section*{Interests}
+\begin{itemize}[leftmargin=*, itemsep=0em, label=-]
+    \item Computer science
+    \item Finances
+    \item Education
+    \item Video games
+\end{itemize}
+
+\end{document}
